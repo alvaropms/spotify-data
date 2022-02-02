@@ -3,7 +3,7 @@ import { getToken, logout } from "./auth";
 import { Store } from "../store/index";
 import { UPDATE_LOAD } from "../actions/actionsType";
 
-export const backURL = 'https://spotify-data-auth.herokuapp.com';
+export const backURL = 'http://localhost:8888'//'https://spotify-data-auth.herokuapp.com';
 
 const API = axios.create({
     

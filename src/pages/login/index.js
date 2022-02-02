@@ -36,7 +36,7 @@ const Login = (props) => {
   return (
     <Center>
         <PageTitle title={<>Seja bem vindo ao Spotify-Data&nbsp; <img src={logoSpotify} height={55} alt='Spotify-logo'/></>}/>
-        <Button style={{'backgroundColor': 'var(--green)'}} node="a" href={backURL+'/login'}>Logar com Spotify</Button>
+        <Button style={{'backgroundColor': 'var(--highlight)'}} node="a" href={backURL+'/login'}>Logar com Spotify</Button>
         <p>
           Este não é um site oficial do Spotify, confira
           o repositório deste projeto no GitHub

@@ -4,9 +4,10 @@ import styled from "styled-components";
 export const StyledCard = styled(Card)`
     max-width: 300px;
     margin: 5px;
-    background-color: var(--light-green);
+    background-color: var(--principal);
 
     border-radius: 10px;
+    border: 1px solid var(--text);
 
     img{
         height: 100%;

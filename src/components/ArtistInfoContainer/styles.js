@@ -6,9 +6,10 @@ export const ArtistInfoContainer = styled(Card)`
     width: 160px;
     height: 262px;
 
-    background-color: var(--light-green);
+    background-color: var(--principal);
 
     border-radius: 10px;
+    border: 1px solid var(--text);
 
     .card-title{
         font-size: 1em;

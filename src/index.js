@@ -11,7 +11,8 @@ import Home from './pages/home';
 import Tracks from './pages/tracks';
 import { GlobalStyle } from './globalStyles';
 import NavbarComponent from './components/Navbar';
-import Loading  from './components/loading/index';
+import Loading  from './components/Loading/index';
+import MyFooter from './components/Footer/index';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,6 +33,12 @@ ReactDOM.render(
           <Route path='tracks' element={<Tracks/>}/>
           <Route path='artists' element={<Artists/>}/>
           <Route path="*" element={<h1>Page not found</h1>} />
+        </Routes>
+      </div>
+      <div>
+        <Routes>
+          <Route path='/' element={<div></div>}/>
+          <Route path='/*' element={<MyFooter/>}/>
         </Routes>
       </div>
       </BrowserRouter>

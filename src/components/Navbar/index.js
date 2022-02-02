@@ -3,7 +3,7 @@ import { Nav, Logo, Dflex } from "./styles";
 import { Icon, NavItem } from "react-materialize";
 import { logout } from "../../utilities/auth";
 import { connect } from "react-redux";
-import {bindActionCreators} from 'redux'
+import {bindActionCreators} from 'redux';
 import { updateName, updateHour } from "../../actions";
 import { isLogged } from "../../utilities/auth";
 import API from '../../utilities/api';
@@ -18,7 +18,7 @@ const NavbarComponent = (props) => {
           updateName(res.data.display_name);
         }
 
-        if(isLogged() && name === ''){
+        if(isLogged()){
           getName();
         }
       }, [updateName, name]);

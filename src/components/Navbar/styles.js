@@ -2,7 +2,7 @@ import { Navbar } from "react-materialize";
 import styled from "styled-components";
 
 export const Nav = styled(Navbar)`
-    background-color: var(--green);
+    background-color: var(--contrast);
 `;
 
 export const Logo = styled.a`
@@ -24,11 +24,11 @@ export const Dflex = styled.div`
     
 
     span{
-        color: var(--black);
+        color: var(--principal);
         margin-right: 5px;
     }
 
     i{
-        color: var(--black);
+        color: var(--principal);
     }
 `;
