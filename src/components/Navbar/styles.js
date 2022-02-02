@@ -2,7 +2,9 @@ import { Navbar } from "react-materialize";
 import styled from "styled-components";
 
 export const Nav = styled(Navbar)`
-    background-color: var(--green);
+    span{
+        background-color: var(--black);
+    }
 `;
 
 export const Logo = styled.a`
