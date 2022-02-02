@@ -27,4 +27,8 @@ export const Dflex = styled.div`
         color: var(--black);
         margin-right: 5px;
     }
+
+    i{
+        color: var(--black);
+    }
 `;
