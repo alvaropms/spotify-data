@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
     *{
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
+        color: var(--white);
     }
     html, body{
         padding: 0px;
@@ -19,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         --gray: #919496;
         --red: #cc3917;
 
-        background-color: var(--white);
+        background-color: var(--black);
     }
 
     *{

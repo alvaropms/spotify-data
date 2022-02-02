@@ -2,7 +2,7 @@ import { Navbar } from "react-materialize";
 import styled from "styled-components";
 
 export const Nav = styled(Navbar)`
-    background-color: var(--black);
+    background-color: var(--green);
 `;
 
 export const Logo = styled.a`
@@ -21,7 +21,7 @@ export const Dflex = styled.div`
     flex-direction: row;
     align-items: center;
 
-    color: var(--red);
+    color: var(--black);
 
     span{
         margin-right: 5px;
