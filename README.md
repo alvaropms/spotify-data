@@ -5,7 +5,7 @@ Você pode conferir este projeto funcionando na web clicando [aqui](https://app-
 
 ## Sobre a aplicação :pencil2:
 
-Com esta aplicação, qualquer usuário poderá alguns conferir dados da sua conta e de seu uso do serviço de streaming de música Spotify.
+Com esta aplicação, qualquer usuário poderá conferir alguns dados da sua conta e de seu uso do serviço de streaming de música Spotify.
 ### Exemplo:
 ![Artists](https://raw.githubusercontent.com/alvaropms/spotify-data/master/src/assets/artists.png)
 ## O que foi aprendido :book:
