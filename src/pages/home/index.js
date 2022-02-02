@@ -26,8 +26,9 @@ const Home = () => {
             <h5>Sobre a aplicação:</h5>
             <StyledP>
                 Com esta aplicação, qualquer usuário poderá alguns conferir dados da sua conta
-                e de seu uso do serviço de streaming de música Spotify.
+                e de seu uso do serviço de streaming de música Spotify. Use o menu no topo da página para começar a usar.
                 <div>
+                    <h5>Exemplos: </h5>
                     <img src={artistsImg} alt='Seus artistas favoritos!' height={400}/>
                     <img src={tracksImg} alt='Suas músicas favoritas!' height={400}/>
                 </div>

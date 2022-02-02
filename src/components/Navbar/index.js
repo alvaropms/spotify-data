@@ -27,12 +27,12 @@ const NavbarComponent = (props) => {
       const date = new Date();
       updateHour(date.getHours());
       if(hour >= 6 && hour < 12){
-        setMessage('Bom dia, '+name);
+        setMessage(name !== '' ?'Bom dia, '+name : 'Bom dia');
       }else{
         if(hour >= 12 && hour < 18){
-          setMessage('Boa tarde, '+name);
+          setMessage(name !== '' ?'Boa tarde, '+name : 'Boa tarde');
         }else{
-          setMessage('Boa noite, '+name);
+          setMessage(name !== '' ?'Boa noite, '+name : 'Boa noite');
         }
       }
     }, [hour, name, updateHour])
