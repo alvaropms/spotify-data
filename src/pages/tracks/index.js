@@ -13,7 +13,7 @@ const Tracks = () => {
 
     useEffect(() => {
         API.get('https://api.spotify.com/v1/me/top/tracks').then(
-            res => {console.log(res.data.items);setResponse(res.data.items)}
+            res => {setResponse(res.data.items)}
         )
     }, [])
 
