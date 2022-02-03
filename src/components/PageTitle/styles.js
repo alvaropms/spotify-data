@@ -6,4 +6,6 @@ export const Title = styled.h3`
     align-items: center;
 
     font-weight: 300;
+
+    padding: 0 10px;
 `;

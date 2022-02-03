@@ -5,6 +5,7 @@ import PageTitle from "../../components/PageTitle";
 import { isLogged } from "../../utilities/auth";
 import { StyledDiv, StyledP } from "./styles";
 const artistsImg = require('../../assets/artists.png');
+const logo = require('../../assets/logospotify.png');
 
 const Home = () => {
     const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Home = () => {
     return (
         <>
         <Container>
-            <PageTitle title={<>Spotify-Data&nbsp;<Icon className="material-icons-outlined" style={{'color':'var(--highlight)'}} medium>emoji_emotions</Icon></>}/>
+            <PageTitle title={<>Spotify-Data&nbsp;<img src={logo} height={56}/></>}/>
             <StyledP center maxWidth={400}>
                 Projeto desenvolvido como forma de aprendizado usando a API do Spotify, com React e o auxílio de bibliotecas como redux e axios.
             </StyledP>

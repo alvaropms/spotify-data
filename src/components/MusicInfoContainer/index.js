@@ -1,18 +1,13 @@
 import React from "react";
-import { CardTitle } from "react-materialize";
-import { StyledCard } from "./styles";
+import { StyledIframe } from "./styles";
 
 const MusicInfoContainer = (props) => {
 
     return(
         <>
-        <StyledCard
-        title={props.music.name+ ' - '+ props.music.artists[0].name}
-            header={<CardTitle image={props.music.album.images[0].url} />}
-            horizontal
-        >
-            {props.music.album.name}
-        </StyledCard>
+        <StyledIframe src={`https://open.spotify.com/embed/track/${props.music.id}`}
+        width="300" height="80" frameborder="0" allowtransparency="true"
+        allow="encrypted-media"></StyledIframe>
         </>
     );
 }

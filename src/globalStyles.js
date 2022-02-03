@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
         --text: #efefef;
         --principal: black;
         --highlight: #1db954;
-        --contrast: #646768;
+        --contrast: RGBA(100,103,104,1);
+        --red: #ff6161;
 
         background-color: var(--principal);
     }
@@ -23,6 +24,22 @@ export const GlobalStyle = createGlobalStyle`
     *{
         .spinner-green, .spinner-green-only{
             border-color: var(--highlight);
+        }
+
+        .sidenav{
+            background-color: var(--contrast);
+            li > a{
+                color: var(--text);
+            }
+        }
+    }
+
+    .container{
+        max-width: 100%;
+        width: 90%;
+
+        @media (max-width: 1017px) {
+            width: 100%;
         }
     }
 

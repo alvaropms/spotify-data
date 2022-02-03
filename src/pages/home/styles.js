@@ -17,8 +17,11 @@ export const StyledP = styled.p`
 `;
 
 export const StyledDiv = styled.div`
+    display: flex;
+    justify-content: center;
 
     img{
-        width: 100%;
+        max-width:100%;
     }
+    
 `;

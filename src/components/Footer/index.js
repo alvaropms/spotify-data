@@ -5,7 +5,7 @@ const MyFooter = () => {
     return(
         <>
         <StyledFooter
-            copyrights="Criado por alvaropms"
+            copyrights="Criado por Álvaro Melquíades"
             links={<ul>
                     <li><a href="https://github.com/alvaropms/spotify-data">Repositório deste projeto</a></li>
                     <li><a href="https://developer.spotify.com/">Spotify para desenvolvedores</a></li>

@@ -11,6 +11,14 @@ export const Logo = styled.a`
     overflow: hidden;
     font-size: 1.4em !important;
 
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+
+    img{
+        margin-left: 5px;
+    }
+
     @media (min-width: 993px) {
         margin-left: 10px;
     }
@@ -24,11 +32,11 @@ export const Dflex = styled.div`
     
 
     span{
-        color: var(--principal);
+        color: var(--red);
         margin-right: 5px;
     }
 
     i{
-        color: var(--principal);
+        color: var(--red);
     }
 `;
