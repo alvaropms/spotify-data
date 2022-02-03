@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import { Col, Container, Icon, Row } from "react-materialize";
+import { Col, Container, Row } from "react-materialize";
 import { useNavigate } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import { isLogged } from "../../utilities/auth";
@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <>
         <Container>
-            <PageTitle title={<>Spotify-Data&nbsp;<img src={logo} height={56}/></>}/>
+            <PageTitle title={<>Spotify-Data&nbsp;<img alt='logo' src={logo} height={56}/></>}/>
             <StyledP center maxWidth={400}>
                 Projeto desenvolvido como forma de aprendizado usando a API do Spotify, com React e o auxílio de bibliotecas como redux e axios.
             </StyledP>
