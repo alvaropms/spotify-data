@@ -6,7 +6,7 @@ import { UPDATE_LOAD } from "../actions/actionsType";
 export const backURL = 'https://spotify-data-auth.herokuapp.com';
 
 const API = axios.create({
-    
+    baseURL: 'https://api.spotify.com/v1/me/top'
 });
 
 API.interceptors.request.use(request => {

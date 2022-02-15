@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Container, Icon } from "react-materialize";
 import PageTitle from "../../components/PageTitle";
 import MusicInfoContainer from "../../components/MusicInfoContainer";
@@ -6,16 +6,15 @@ import Grid from '../../components/Grid';
 import API from '../../utilities/api';
 import { useNavigate } from "react-router-dom";
 import { isLogged } from "../../utilities/auth";
+import { useQuery } from "react-query";
 
 const Tracks = () => {
-    const [response, setResponse] = useState([]);
     const navigate = useNavigate()
-
-    useEffect(() => {
-        API.get('https://api.spotify.com/v1/me/top/tracks').then(
-            res => {setResponse(res.data.items)}
+    const {data} = useQuery('get_artists', () =>
+        API.get('tracks').then(
+            res => res.data.items
         )
-    }, [])
+    )
 
     useEffect(()=>{
         if(!isLogged()){
@@ -29,7 +28,7 @@ const Tracks = () => {
             <PageTitle title={<>Suas músicas favoritas no Spotify&nbsp;<Icon className="material-icons-outlined" style={{'color':'blue'}} medium>headset</Icon></>}/>
             <Grid>
                 {
-                    response.map(music => (
+                    data?.map(music => (
                         <MusicInfoContainer key={music.id} music={music}/>
                     ))
                 }
