@@ -10,7 +10,7 @@ import { useQuery } from "react-query";
 
 const Tracks = () => {
     const navigate = useNavigate()
-    const {data} = useQuery('get_artists', () =>
+    const {data} = useQuery('get_tracks', () =>
         API.get('tracks').then(
             res => res.data.items
         )

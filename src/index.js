@@ -3,61 +3,24 @@ import ReactDOM from 'react-dom';
 
 import {Provider} from 'react-redux';
 import {Store} from './store/index';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
-import Login from './pages/login';
-import Artists from './pages/artists';
-import Home from './pages/home';
-import Tracks from './pages/tracks';
 import { GlobalStyle } from './globalStyles';
-import NavbarComponent from './components/Navbar';
-import Loading  from './components/Loading/index';
-import MyFooter from './components/Footer/index';
+import {QueryClientProvider} from 'react-query';
+import {queryClient} from './utilities/api';
+import App from './App';
 
-import {QueryClient, QueryClientProvider} from 'react-query';
-
-const queryClient = new QueryClient({
-  defaultOptions:{
-    queries: {
-      refetchOnWindowFocus: false,
-      staleTime: 1000 * 60 * 5,
-      refetchOnReconnect: false,
-      refetchOnMount: false
-    }
-}
-});
 
 ReactDOM.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
       <GlobalStyle/>
       <Provider store={Store}>
         <BrowserRouter>
-        <div>
-          <Loading/>
-          <Routes>
-              <Route path='/' element={<div></div>}/>
-              <Route path='/*' element={<NavbarComponent/>}/>
-          </Routes>
-        </div>
-        <div>
-          <Routes>
-            <Route path='/' element={<Login/>}/>
-            <Route path='home' element={<Home/>}/>
-            <Route path='tracks' element={<Tracks/>}/>
-            <Route path='artists' element={<Artists/>}/>
-            <Route path="*" element={<h1>Page not found</h1>} />
-          </Routes>
-        </div>
-        <div>
-          <Routes>
-            <Route path='/' element={<div></div>}/>
-            <Route path='/*' element={<MyFooter/>}/>
-          </Routes>
-        </div>
+          <QueryClientProvider client={queryClient}>
+            <App/>
+          </QueryClientProvider>
         </BrowserRouter>
       </Provider>
-    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

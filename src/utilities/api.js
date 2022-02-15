@@ -2,6 +2,7 @@ import axios from "axios";
 import { getToken, logout } from "./auth";
 import { Store } from "../store/index";
 import { UPDATE_LOAD } from "../actions/actionsType";
+import { QueryClient } from "react-query";
 
 export const backURL = 'https://spotify-data-auth.herokuapp.com';
 
@@ -32,6 +33,17 @@ API.interceptors.response.use( response => {
 
   return Promise.reject(error);
 })
+
+export const queryClient = new QueryClient({
+  defaultOptions:{
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: Infinity,
+      refetchOnReconnect: false,
+      refetchOnMount: false
+    }
+}
+});
 
 
 

@@ -1,11 +1,12 @@
 import { Navbar } from "react-materialize";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Nav = styled(Navbar)`
     background-color: var(--contrast);
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(Link)`
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

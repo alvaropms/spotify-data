@@ -12,10 +12,11 @@ import { useQuery } from "react-query";
 const Artists = () => {
     let navigate = useNavigate();
 
-    const { data } = useQuery('get_artists', () =>
-        API.get('artists').then(
-            res => res.data.items
-        )
+    const { data } = useQuery('get_artists', async () =>{
+        const response = await API.get('artists')
+
+        return response.data.items
+    }
     )
 
     useEffect(()=>{
