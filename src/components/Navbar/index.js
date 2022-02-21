@@ -18,20 +18,14 @@ const NavbarComponent = (props) => {
               <img alt="logo" src={logo} height={40}/>
               </Logo>}
         >
-                <Link to={'/home'}>
-                    <NavItem className="sidenav-close">
+                <Link className="sidenav-close" to={'/home'}>
                     Sobre o projeto
-                    </NavItem>
                 </Link>
-                <Link to={'/artists'}>
-                    <NavItem className="sidenav-close">
+                <Link className="sidenav-close" to={'/artists'}>
                     Artistas favoritos
-                    </NavItem>
                 </Link>
-                <Link to={'/tracks'}>
-                    <NavItem className="sidenav-close">
+                <Link className="sidenav-close" to={'/tracks'}>
                     Músicas favoritas
-                    </NavItem>
                 </Link>
             <NavItem href="/" onClick={() => logout()}>
                 <Dflex>
